@@ -1,18 +1,12 @@
 .father{
   display : grid;
   gap: 5px;
-  height: 50vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template: 
-  "header content nav footer" 1fr
-  ". . . ." 1fr
-  ". . . ." 1fr
-  ". . . ." 1fr / 1fr 1fr 1fr 1fr;
-  /* justify-items: center;
-  align-items: center; */
-  /* place-items: center center; */
-  /* place-items: end center; */
+  height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  /* justify-content: space-between;
+  align-content: end; */
+  place-content: end space-between;
 }
 
 div{
@@ -23,20 +17,16 @@ div{
 
 .header{
   background-color: purple;
-  grid-area: header;
 }
 
 .content{
   background-color: blue;
-  grid-area: content;
 }
 
 .nav{
   background-color: red;
-  grid-area: nav;
 }
 
 .footer{
   background-color: yellow;
-  grid-area: footer;
 }
