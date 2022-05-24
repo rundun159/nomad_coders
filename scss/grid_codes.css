@@ -1,16 +1,31 @@
-.father{
-  background-color: beige;
-  display : grid;
-  gap: 5px;
-  height: 100vh;
-  grid-template-columns: repeat(10, minmax(100px, 150px));
-  grid-template-rows: repeat(4, 100px);
-  grid-auto-rows: 100px;
+body{
+  background-color: bisque;
 }
-div{
-  color: white;
-  font-size: large;
+
+.grid{
+  display: grid;
+  margin-bottom: 20px;
+  gap: 5px;
 }
 .item{
-  background-color: green;
+  background-color: yellowgreen;
+}
+
+h1{
+  display: block;
+}
+
+/* .grid:first-child{
+  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+}
+.grid:last-child{
+  grid-template-columns: repeat( auto-fit, minmax(100px, 150px));
+} */
+
+
+.grid.first{
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.grid.second{
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
