@@ -1,32 +1,28 @@
 .father{
+  background-color: beige;
   display : grid;
   gap: 5px;
   height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
-  /* justify-content: space-between;
-  align-content: end; */
-  place-content: end space-between;
 }
-
 div{
   color: white;
   font-size: large;
 }
-
-
 .header{
   background-color: purple;
+  /* justify-self: end;
+  align-self: end; */
+  /* place-self: end end; */
+  place-self: start end;
 }
-
 .content{
   background-color: blue;
 }
-
 .nav{
   background-color: red;
 }
-
 .footer{
   background-color: yellow;
 }
