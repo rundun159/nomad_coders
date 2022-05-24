@@ -5,24 +5,14 @@
   height: 100vh;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
 }
 div{
   color: white;
   font-size: large;
 }
-.header{
-  background-color: purple;
-  /* justify-self: end;
-  align-self: end; */
-  /* place-self: end end; */
-  place-self: start end;
-}
-.content{
-  background-color: blue;
-}
-.nav{
-  background-color: red;
-}
-.footer{
-  background-color: yellow;
+.item{
+  background-color: green;
 }
