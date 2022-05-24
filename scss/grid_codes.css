@@ -1,0 +1,29 @@
+.father{
+  display : grid;
+  gap: 10px;
+  /* grid-template-columns: repeat(4, 200px); */
+  grid-template-columns: [first-line] 100px [second-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line] 100px;
+  grid-template-rows: repeat(4, [column-line] 100px);
+}
+
+.header{
+  background-color: purple;
+  grid-column : first-line / fifth-line;
+}
+
+.content{
+  background-color: blue;
+  grid-column: first-line / fourth-line;
+  grid-row : column-line 2 / column-line 4;
+}
+
+.nav{
+  background-color: red;
+  grid-column : fourth-line / fifth-line;
+  grid-row : column-line 2 / column-line 4; 
+}
+
+.footer{
+  background-color: yellow;
+  grid-column: first-line / fifth-line;
+}
