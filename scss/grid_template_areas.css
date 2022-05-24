@@ -1,0 +1,32 @@
+.father{
+  display : grid;
+  grid-template-columns: repeat(4, 100px);
+  /* grid-template-columns: auto auto auto 200px; */
+  grid-template-rows: repeat(4, 100px);
+  /* grid-template-rows: 100px repeat(2, 200px) 100px; */
+  grid-template-areas:
+  "header header header header"
+  "content content content nav"
+  "content content content nav"
+  "footer footer footer footer";
+}
+
+.header{
+  background-color: purple;
+  grid-area: header;
+}
+
+.content{
+  background-color: blue;
+  grid-area: content;
+}
+
+.nav{
+  background-color: red;
+  grid-area: nav;
+}
+
+.footer{
+  background-color: yellow;
+  grid-area: footer;
+}
