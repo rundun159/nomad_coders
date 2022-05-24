@@ -9,7 +9,8 @@
   ". . . ." 1fr
   ". . . ." 1fr
   ". . . ." 1fr / 1fr 1fr 1fr 1fr;
-  /* justify-content: stretch; */
+  /* justify-items: center;
+  align-items: center; */
   /* place-items: center center; */
   /* place-items: end center; */
 }
