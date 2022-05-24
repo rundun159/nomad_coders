@@ -1,13 +1,24 @@
 .father{
   display : grid;
-  gap: 10px;
+  gap: 5px;
   height: 50vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-template: 
-    "header header header header" 1fr
-    "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr
-  ;
+  "header content nav footer" 1fr
+  ". . . ." 1fr
+  ". . . ." 1fr
+  ". . . ." 1fr / 1fr 1fr 1fr 1fr;
+  /* justify-content: stretch; */
+  /* place-items: center center; */
+  /* place-items: end center; */
 }
+
+div{
+  color: white;
+  font-size: large;
+}
+
 
 .header{
   background-color: purple;
