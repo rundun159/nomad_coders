@@ -6,26 +6,17 @@ body{
   display: grid;
   margin-bottom: 20px;
   gap: 5px;
+  /* grid-template-columns: repeat(auto-fill, max-content); */
+  /* grid-template-columns: repeat(7, minmax(max-content, 1fr)); */
+  /* grid-template-columns: repeat(7, minmax(max-content, 1fr)); */
+  /* grid-template-columns: repeat(7, max-content); */
+  grid-template-columns: repeat(7, min-content);
 }
 .item{
   background-color: yellowgreen;
+  padding: 10px;
 }
 
 h1{
   display: block;
-}
-
-/* .grid:first-child{
-  grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
-}
-.grid:last-child{
-  grid-template-columns: repeat( auto-fit, minmax(100px, 150px));
-} */
-
-
-.grid.first{
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
-.grid.second{
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
