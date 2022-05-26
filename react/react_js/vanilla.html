@@ -14,26 +14,22 @@
   <body>
     <div id="root"></div>
   </body>
-
   <script type="text/babel">
-    const root_div = document.querySelector('#root');
-    const Title = () => (
-      <h3 id="title" onMouseEnter={() => console.log('mouse Enter')}>
-        {' '}
-        Hello I'm span{' '}
-      </h3>
-    );
-    const Button = () => (
-      <button onClick={() => console.log('Button Clicked!')}>
-        {' '}
-        Click Me!{' '}
-      </button>
-    );
+    let counter = 0;
+    function render_container() {
+      ReactDOM.render(<Container />, root);
+    }
+    function counterUp() {
+      counter = counter + 1;
+      render_container();
+    }
+    const root = document.getElementById('root');
     const Container = () => (
       <div>
-        <Title /> <Button />{' '}
+        <h3>Total Clicks: {counter}</h3>
+        <button onClick={counterUp}>Click Me</button>
       </div>
     );
-    ReactDOM.render(<Container />, root_div);
+    render_container();
   </script>
 </html>
