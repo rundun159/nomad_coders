@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-</head>
+  <body>
+    <div id="root"></div>
+  </body>
 
-<body>
-  <div id="root"></div>
-</body>
-
-<script>
-  const root_div = document.querySelector('#root');
-  const h3 = React.createElement(
-    'h3',
-    { onMouseEnter: () => console.log("mouse Enter") },
-    "Hello. I'm span");
-  const btn = React.createElement(
-    'button',
-    { onClick: () => console.log("Button clicked!") },
-    'Click me');
-  const container = React.createElement("div", null, [h3, btn]);
-  ReactDOM.render(container, root_div);
-</script>
-
+  <script type="text/babel">
+    const root_div = document.querySelector('#root');
+    const Title = () => (
+      <h3 id="title" onMouseEnter={() => console.log('mouse Enter')}>
+        {' '}
+        Hello I'm span{' '}
+      </h3>
+    );
+    const Button = () => (
+      <button onClick={() => console.log('Button Clicked!')}>
+        {' '}
+        Click Me!{' '}
+      </button>
+    );
+    const Container = () => (
+      <div>
+        <Title /> <Button />{' '}
+      </div>
+    );
+    ReactDOM.render(<Container />, root_div);
+  </script>
 </html>
